@@ -1,7 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+
 
 .bg-img {
   height: 90vh;
@@ -20,7 +17,7 @@ body {
   .dropdown:hover > .dropdown-menu {
     display: block;
   }
-  .dropdown > .dropdown-toggle:active {
+  #dropdownMenuButton:active {
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
   }
