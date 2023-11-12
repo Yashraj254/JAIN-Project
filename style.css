@@ -97,7 +97,6 @@
   left: 50%;
 }
 
-
 /***** Login and Register Buttons,  Search Bar *****/
 
 .register-buttons button {
@@ -129,7 +128,6 @@
   transition: background-color 0.5s ease-out;
 }
 
-
 /***** Home Page *****/
 
 .bg-img {
@@ -151,14 +149,12 @@
   text-shadow: 0 0 2px #fff, 0 0 6px #000, 0 0 8px #000, 0 0 10px #000;
 }
 
-.book{
+.book {
   background-color: white;
 }
 
-.book:hover{
+.book:hover {
   background-color: #ffc107;
   color: white;
   transition: background-color 0.5s ease-out;
 }
-
-
