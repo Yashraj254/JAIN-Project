@@ -16,6 +16,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
+
+    <!-- Navbar -->
+
     <nav class="navbar navbar-expand-lg z-1 py-0">
       <div class="container-fluid">
         <a class="navbar-brand fw-bolder fs-1 pe-5 py-0" href="#">
@@ -50,7 +53,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link rounded-2" aria-current="page" href="#">Book</a>
+              <a class="nav-link rounded-2 book" aria-current="page" href="#">Book</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -83,24 +86,27 @@
               <a class="nav-link rounded-2" aria-current="page" href="#">About</a>
             </li>
           </ul>
-          <div class="d-flex p-2 register-buttons">
-            <button class="btn text-white me-3">Login</button>
-            <button class="btn text-white">Register</button>
+          <div class="d-flex p-2 register-buttons ms-auto">
+            <button class="btn text-white me-3"><b>Login</b></button>
+            <button class="btn text-white"><b>Register</b></button>
           </div>
-          <form class="d-flex ms-auto p-3" role="search">
+          <form class="d-flex p-3" role="search">
             <input
               class="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn bg-warning text-white" type="submit">
-              Search
+            <button class="btn search" type="submit">
+              <b>Search</b>
             </button>
           </form>
         </div>
       </div>
     </nav>
+
+    <!-- Home Page -->
+
     <section class="shadow-for-text">
       <div
         id="carouselExampleAutoplaying"
@@ -122,7 +128,7 @@
               <p class="text-white shadow-lg">
                 "Incredible India: Unveil the secrets of ancient civilizations."
               </p>
-              <button class="btn bg-white text-black">Book Place</button>
+              <button class="btn book"><b>Book Place</b></button>
             </div>
           </div>
 
@@ -141,7 +147,7 @@
               <p class="text-white">
                 "France: A timeless romance with history, art, and elegance."
               </p>
-              <button class="btn bg-white text-black">Book Place</button>
+              <button class="btn book"><b>Book Place</b></button>
             </div>
           </div>
 
@@ -163,7 +169,7 @@
               <p class="text-white">
                 "The United States: Where every city tells a different story."
               </p>
-              <button class="btn bg-white text-black">Book Place</button>
+              <button class="btn book"><b>Book Place</b></button>
             </div>
           </div>
 
@@ -182,7 +188,7 @@
                 "Germany: Where history and innovation converge for the curious
                 traveler."
               </p>
-              <button class="btn bg-white text-black">Book Place</button>
+              <button class="btn book"><b>Book Place</b></button>
             </div>
           </div>
         </div>
