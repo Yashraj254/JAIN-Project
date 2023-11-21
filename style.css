@@ -1,4 +1,10 @@
+section {
+  scroll-margin-top: 5rem;
+}
+
 /****** Navigation Items *****/
+
+
 
 .nav-item :hover {
   background-color: #ffc107;
@@ -128,7 +134,7 @@
   transition: background-color 0.5s ease-out;
 }
 
-/***** Home Page *****/
+/***** Home Section *****/
 
 .bg-img {
   height: 90vh;
@@ -158,3 +164,14 @@
   color: white;
   transition: background-color 0.5s ease-out;
 }
+
+/***** Booking Section *****/
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
+}
+
+
