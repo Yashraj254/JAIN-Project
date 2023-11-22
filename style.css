@@ -4,8 +4,6 @@ section {
 
 /****** Navigation Items *****/
 
-
-
 .nav-item :hover {
   background-color: #ffc107;
   color: white;
@@ -174,4 +172,23 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
+.card-text {
+  display: none;
+  transition: display 2s;
+}
 
+#packages .card:hover,#services .card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  transition: 0.5s;
+  position: absolute;
+  max-width: 400px;
+}
+
+.card{
+  transition: 0.5s;
+}
+
+.card:hover .card-text {
+  display: inline;
+}
