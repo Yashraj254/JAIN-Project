@@ -172,21 +172,24 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
-.card-text {
-  display: none;
-  transition: display 2s;
+/***** Packages and Services Section *****/
+
+.card {
+  transition: 0.5s;
 }
 
-#packages .card:hover,#services .card:hover {
+#packages .card:hover,
+#services .card:hover {
   transform: scale(1.1);
   z-index: 1;
   transition: 0.5s;
   position: absolute;
   max-width: 400px;
+  box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #000, 0 0 5px #000;
 }
 
-.card{
-  transition: 0.5s;
+.card-text {
+  display: none;
 }
 
 .card:hover .card-text {
