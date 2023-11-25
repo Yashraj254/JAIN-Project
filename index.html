@@ -83,16 +83,22 @@
                 Packages
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#packages">Australia</a></li>
-                <li><a class="dropdown-item" href="#packages">Canada</a></li>
-                <li><a class="dropdown-item" href="#packages">China</a></li>
-                <li><a class="dropdown-item" href="#packages">France</a></li>
-                <li><a class="dropdown-item" href="#packages">Germany</a></li>
-                <li><a class="dropdown-item" href="#india">India</a></li>
-                <li><a class="dropdown-item" href="#packages">Sri Lanka</a></li>
-                <li><a class="dropdown-item" href="#packages">Thailand</a></li>
                 <li>
-                  <a class="dropdown-item" href="#packages">United States</a>
+                  <a class="dropdown-item" href="#australia">Australia</a>
+                </li>
+                <li><a class="dropdown-item" href="#canada">Canada</a></li>
+                <li><a class="dropdown-item" href="#china">China</a></li>
+                <li><a class="dropdown-item" href="#france">France</a></li>
+                <li><a class="dropdown-item" href="#germany">Germany</a></li>
+                <li><a class="dropdown-item" href="#india">India</a></li>
+                <li>
+                  <a class="dropdown-item" href="#sri_lanka">Sri Lanka</a>
+                </li>
+                <li><a class="dropdown-item" href="#thailand">Thailand</a></li>
+                <li>
+                  <a class="dropdown-item" href="#united_states"
+                    >United States</a
+                  >
                 </li>
               </ul>
             </li>
@@ -466,8 +472,6 @@
               <button class="btn btn-primary" type="submit">Book Place</button>
             </div>
           </form>
-
-    
         </div>
       </div>
     </section>
@@ -506,14 +510,19 @@
                 </p>
 
                 <p><b>Price: $5,000</b></p>
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('australia')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
 
           <div class="col-md-4 col-sm-6">
             <div class="card">
-              <img src="images/canada.png" class="card-img-top" alt="..." />
+              <img src="images/canada.png" class="card-img-top" alt="Canada" />
               <div class="card-body">
                 <h5 class="card-title">
                   Canada
@@ -532,14 +541,19 @@
 
                 <p><b>Price: $3,000</b></p>
 
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('canada')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
 
           <div class="col-md-4 col-sm-6">
             <div class="card">
-              <img src="images/china.png" class="card-img-top" alt="..." />
+              <img src="images/china.png" class="card-img-top" alt="China" />
               <div class="card-body">
                 <h5 class="card-title">
                   China
@@ -557,7 +571,12 @@
                 </p>
 
                 <p><b>Price: $2,000</b></p>
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('china')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
@@ -572,7 +591,7 @@
                 src="images/france.png"
                 class="card-img-top"
                 width="150"
-                alt="..."
+                alt="France"
               />
               <div class="card-body">
                 <h5 class="card-title">
@@ -593,14 +612,23 @@
                 </p>
 
                 <p><b>Price: $4,000</b></p>
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('france')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
 
           <div class="col-md-4 col-sm-6">
             <div class="card">
-              <img src="images/germany.png" class="card-img-top" alt="..." />
+              <img
+                src="images/germany.png"
+                class="card-img-top"
+                alt="Germany"
+              />
               <div class="card-body">
                 <h5 class="card-title">
                   Germany
@@ -619,7 +647,12 @@
                 </p>
 
                 <p><b>Price: $2,000</b></p>
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('germany')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
@@ -645,7 +678,12 @@
 
                 <p><b>Price: $1,500</b></p>
 
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('india')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
@@ -653,7 +691,7 @@
 
         <!-- Row 3 -->
 
-        <div class="row m-2 gy-3">
+        <div class="row m-2 gy-3" id="sri_lanka">
           <div class="col-md-4 col-sm-6">
             <div class="card">
               <img
@@ -679,14 +717,23 @@
 
                 <p><b>Price: $1,200</b></p>
 
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('sri_lanka')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
 
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-6" id="thailand">
             <div class="card">
-              <img src="images/thailand.png" class="card-img-top" alt="..." />
+              <img
+                src="images/thailand.png"
+                class="card-img-top"
+                alt="Thailand"
+              />
               <div class="card-body">
                 <h5 class="card-title">
                   Thailand
@@ -704,17 +751,22 @@
                 </p>
 
                 <p><b>Price: $2,500</b></p>
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('thailand')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>
 
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-6" id="united_states">
             <div class="card">
               <img
                 src="images/united_states.png"
                 class="card-img-top"
-                alt="..."
+                alt="United States"
               />
               <div class="card-body">
                 <h5 class="card-title">
@@ -733,7 +785,12 @@
                 </p>
 
                 <p><b>Price: $3,000</b></p>
-                <a href="#booking" class="btn btn-primary">Book Place</a>
+                <a
+                  href="#booking"
+                  class="btn btn-primary"
+                  onclick="setDestinationValue('united_states')"
+                  >Book Place</a
+                >
               </div>
             </div>
           </div>

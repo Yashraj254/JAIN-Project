@@ -63,12 +63,43 @@ navLinks.forEach((link) => {
 
 // Dates Validation
 
-document.getElementById("startDateValidation").min = new Date()
-  .toISOString()
-  .split("T")[0];
+$("#startDateValidation")[0].min = new Date().toISOString().split("T")[0];
 
-document.getElementById("endDateValidation").min = new Date(
+$("#endDateValidation")[0].min = new Date(
   new Date().setDate(new Date().getDate() + 2)
 )
   .toISOString()
   .split("T")[0];
+
+// Packages
+
+function setDestinationValue(newValue) {
+  $("#destinationValidation").val(newValue);
+}
+
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  // Remove links that don't actually link to anything
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+
+        var scrollTop = target.offset().top - $('.sticky-top').height();
+
+        $('html, body').animate({
+          scrollTop: scrollTop
+        }, 1000)
+      }
+    }
+});
