@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
 section {
   scroll-margin-top: 5rem;
 }
@@ -208,11 +215,14 @@ section {
   transform: scale(1.1);
   transition: transform 0.8s ease-in-out;
 }
+.card:hover .card-text {
+  display: inline;
+}
+
+
 
 .card-text {
   display: none;
 }
 
-.card:hover .card-text {
-  display: inline;
-}
+
