@@ -3,8 +3,6 @@
   padding: 0;
 }
 
-
-
 section {
   scroll-margin-top: 5rem;
 }
@@ -219,10 +217,23 @@ section {
   display: inline;
 }
 
-
-
 .card-text {
   display: none;
 }
 
+/***** Gallery Section *****/
 
+#gallery img {
+  transition: 0.5s;
+}
+
+#gallery img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/***** Footer Section *****/
+Footer {
+  background-color: #bce8e6;
+  margin-bottom: -15px;
+}
