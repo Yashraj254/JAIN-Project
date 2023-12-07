@@ -4,6 +4,7 @@ $(document).ready(function () {
   var canClick = true; // A flag to control whether the button can be clicked
 
   $(".navbar-toggler").click(function () {
+    console.log("click");
     if (canClick) {
       $("#nav-icon").toggleClass("open");
       canClick = false; // Disable further clicks
@@ -28,8 +29,10 @@ navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     // Check if the clicked element is the exception
     if (!event.target.classList.contains("no-collapse-toggle")) {
-      $(".navbar-toggler").click();
-      bsCollapse.toggle();
+      if ($("#nav-icon")[0].classList.contains("open")) {
+        $(".navbar-toggler").click();
+        bsCollapse.toggle();
+      }
     }
   });
 });

@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 section {
   scroll-margin-top: 5rem;
 }
@@ -184,14 +189,28 @@ section {
 }
 
 .logo {
-  transition: 0.5s;
+  transform: scale(1.2);
+  animation: rotate 2.5s linear infinite;
+  /* animation: rotate 6.0s linear infinite; */
+
+}
+.logo2 {
+  animation: rotate 2.5s linear infinite;
+  /* animation: rotate 6.0s linear infinite; */
+
 }
 
 .logo:hover {
   transition: 0.5s;
   transform: scale(1.2);
+  animation: rotate 1.5s linear infinite;
 }
 
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /***** Packages and Services Section *****/
 
 .card {
@@ -201,7 +220,7 @@ section {
 
 #packages .card:hover,
 #services .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.01) translate(-5%, -5%);
   z-index: 1;
   transition: 0.5s;
   position: absolute;
