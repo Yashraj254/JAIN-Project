@@ -3,8 +3,7 @@
   padding: 0;
 }
 
-body,
-html {
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -190,19 +189,28 @@ section {
 }
 
 .logo {
-  transform: scale(1.2);
   animation: rotate 2.5s linear infinite;
+  transform: scale(1);
 }
 
 .navbar-logo {
-  animation: rotate 2.5s linear infinite;
+  animation: rotate-nav-logo 2.5s linear infinite;
 }
+
 
 @keyframes rotate {
   to {
     transform: rotate(360deg);
+    transform: scale(1.2);
   }
 }
+
+@keyframes rotate-nav-logo {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /***** Packages and Services Section *****/
 
 .card {
