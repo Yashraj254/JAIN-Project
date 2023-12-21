@@ -10,6 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -123,8 +124,20 @@
             </li>
           </ul>
           <div class="d-flex p-2 register-buttons ms-auto">
-            <button class="btn text-white me-3"><b>Login</b></button>
-            <button class="btn text-white"><b>Register</b></button>
+            <button
+              data-bs-target="#loginModal"
+              class="btn btn-warning text-white me-3"
+              data-bs-toggle="modal"
+            >
+              <b>Login</b>
+            </button>
+            <button
+              data-bs-target="#regModal"
+              class="btn text-white"
+              data-bs-toggle="modal"
+            >
+              <b>Register</b>
+            </button>
           </div>
           <form class="d-flex p-3" role="search">
             <input
@@ -140,6 +153,151 @@
         </div>
       </div>
     </nav>
+
+    <section class="login">
+      <div class="modal fade" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white"><h4>Login</h4></div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="Email"><b>Email address</b> </label>
+                  <input
+                    type="email"
+                    class="form-control mt-2"
+                    id="loginEmail"
+                    placeholder="abc@gmail.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Password"><b>Password</b></label>
+                  <input
+                    type="password"
+                    class="form-control mt-2"
+                    id="password1"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="form-group">
+                  <a href="#"><small>Forgot password?</small></a>
+                  <br />
+                  <br />
+                  Don't have an account?
+                  <a
+                    href="#regModal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#regModal"
+                    >Register here</a
+                  >
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    data-bs-dismiss="modal"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="regModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h4>Registration</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="name"><b>Full Name</b></label>
+                  <input
+                    type="text"
+                    class="form-control mt-1"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div class="form-group mt-2">
+                  <label for="Contact"><b>Contact</b></label>
+                  <input type="tel" class="form-control mt-1" id="Contact" />
+                </div>
+                <div class="form-group mt-2">
+                  <label for="date"><b>Date of birth</b></label>
+                  <input type="date" class="form-control mt-1" id="date" />
+                </div>
+                <div class="form-group mt-2">
+                  <label for="Gender"><b>Gender</b></label>
+                  <br />
+                  <input type="radio" name="radio" id="radio1" /> Male
+                  <input type="radio" name="radio" id="radio2" /> Female
+                  <input type="radio" name="radio" id="radio3" /> Other
+                </div>
+                <div class="form-group mt-2">
+                  <label for="Email1"><b>Email address</b></label>
+                  <input
+                    type="email"
+                    class="form-control mt-1"
+                    id="registerEmail"
+                    placeholder="abc@gmail.com"
+                  />
+                  <p id="regiEmailtext"></p>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="Password"><b>Password</b></label>
+                  <input
+                    type="password"
+                    class="form-control mt-1"
+                    id="password"
+                    placeholder="Enter your Password"
+                  />
+                  <p id="pwdtext"></p>
+                </div>
+                <div class="form-group">
+                  <br />
+                  Already have an account?
+                  <a
+                    href="#regModal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                    >Sign in here</a
+                  >
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    data-bs-dismiss="modal"
+                  >
+                    Register
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!------- Home Section ------->
 
@@ -170,7 +328,9 @@
                 Australia: Where adventure meets horizon, and every day is a
                 journey into the extraordinary.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('australia')"
+                ><button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -190,7 +350,9 @@
                 Canada: A land of wilderness and wonder, where nature's grandeur
                 is a testament to the beauty of the Great North.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('canada')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -209,7 +371,9 @@
                 China, where ancient history meets modern marvels, and every
                 step is a bridge between tradition and innovation.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('china')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -229,7 +393,9 @@
                 symphony for the senses, inviting you to savor life's exquisite
                 pleasures.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('france')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -248,7 +414,9 @@
                 stands as a testament to a history rich in culture and
                 resilience.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('germany')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -268,7 +436,9 @@
                 India, where ancient traditions meet modern wonders, and every
                 moment is a celebration of colors, flavors, and spirituality.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('india')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -291,7 +461,9 @@
                 Sri Lanka: A teardrop in the Indian Ocean, where every drop
                 holds the essence of a thousand stories.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('sri_lanka')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -314,7 +486,9 @@
                 Thailand: Land of smiles, where every corner reveals a new
                 adventure and every dish is a journey for your taste buds.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('thailand')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
 
@@ -337,7 +511,9 @@
                 America, the land of dreams and diversity, where each state is a
                 chapter in the epic novel of the pursuit of happiness.
               </p>
-              <button class="btn book"><b>Book Place</b></button>
+              <a href="#booking" onclick="setDestinationValue('united_states')">
+                <button class="btn book"><b>Book Place</b></button></a
+              >
             </div>
           </div>
         </div>
@@ -373,7 +549,7 @@
       <div class="container">
         <div class="row gy-3 p-2">
           <div class="col-md-5 card d-flex flex-column justify-content-center">
-            <img src="images/infinity.png" alt="" class="img-fluid logo " />
+            <img src="images/infinity.png" alt="" class="img-fluid logo" />
           </div>
 
           <form class="col align-self-center fs-5 needs-validation" novalidate>
@@ -937,7 +1113,7 @@
 
     <!------- Gallery Section ------->
 
-    <section class="min-vh-100 mb-5" id="gallery">
+    <section class="mb-5" id="gallery">
       <h1 class="text-center m-3">
         <span class="text-warning fw-bold">G</span>allery
       </h1>
@@ -962,7 +1138,7 @@
 
         <!-- Row 2 -->
 
-        <div class="row  g-3">
+        <div class="row g-3">
           <div class="col-md-4">
             <img src="images/india.png" alt="" class="img-fluid rounded-3" />
           </div>
@@ -982,7 +1158,7 @@
 
     <!------- About Section ------->
 
-    <section class="m-4 pb-4" id="about">
+    <section class="pb-4" id="about">
       <h1 class="text-center m-3">
         <span class="text-warning fw-bold">About</span> Us
       </h1>
@@ -999,11 +1175,22 @@
           <div class="col-md-6">
             <h1>How our Travel Agency Work</h1>
             <p>
-              Our travel agency serves as a comprehensive facilitator for individuals or groups seeking to plan and organize their trips. Customers convey their travel preferences, and the agency responds by creating personalized itineraries that encompass transportation, accommodation, and activities. Our agency then handles all aspects of booking, providing necessary documents, and collecting payments. Throughout the travel process, customer support is offered, addressing any concerns or emergencies. We establish partnerships with service providers, negotiate rates, and continuously adapt to industry trends. From marketing to advisory services, we simplify the complexities of travel, ensuring a seamless and enjoyable experience for our clients.
+              Our travel agency serves as a comprehensive facilitator for
+              individuals or groups seeking to plan and organize their trips.
+              Customers convey their travel preferences, and the agency responds
+              by creating personalized itineraries that encompass
+              transportation, accommodation, and activities. Our agency then
+              handles all aspects of booking, providing necessary documents, and
+              collecting payments. Throughout the travel process, customer
+              support is offered, addressing any concerns or emergencies. We
+              establish partnerships with service providers, negotiate rates,
+              and continuously adapt to industry trends. From marketing to
+              advisory services, we simplify the complexities of travel,
+              ensuring a seamless and enjoyable experience for our clients.
             </p>
-            <button  class="btn btn-primary btn-warning text-white w-auto"
-              >Read More</
-            >
+            <button class="btn btn-primary btn-warning text-white w-auto">
+              Read More
+            </button>
           </div>
         </div>
       </div>
@@ -1013,7 +1200,7 @@
 
     <footer class="h-100 mt-4 text-center" id="footer">
       <h1><span class="text-warning fw-bold">Infinity</span> Explorers</h1>
-      <p> Unleashing Limitless Adventures, One Journey at a Time.</p>
+      <p>Unleashing Limitless Adventures, One Journey at a Time.</p>
       <ul class="fs-3">
         <li class="list-inline-item">
           <a href="#"><i class="bi bi-facebook text-black"></i></a>
