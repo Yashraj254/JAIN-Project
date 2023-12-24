@@ -28,7 +28,7 @@
   <body>
     <!------- Navbar ------->
 
-    <nav class="navbar navbar-expand-lg z-2 py-0 sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg z-2 py-0 sticky-top bg-white vw-100">
       <div class="container-fluid">
         <a class="navbar-brand fw-bolder fs-1 pe-5 py-0" href="#home">
           <img
@@ -160,24 +160,26 @@
           <div class="modal-content">
             <div class="modal-header bg-primary text-white"><h4>Login</h4></div>
             <div class="modal-body">
-              <form>
+              <form id="loginForm">
                 <div class="form-group">
                   <label for="Email"><b>Email address</b> </label>
                   <input
                     type="email"
                     class="form-control mt-2"
-                    id="loginEmail"
+                    id="loginInputEmail"
                     placeholder="abc@gmail.com"
                   />
+                  <p class="px-2" id="loginEmailValidity"></p>
                 </div>
                 <div class="form-group">
                   <label for="Password"><b>Password</b></label>
                   <input
                     type="password"
                     class="form-control mt-2"
-                    id="password1"
                     placeholder="Password"
+                    id="loginInputPassword"
                   />
+                  <p class="px-2" id="loginPasswordValidity"></p>
                 </div>
                 <div class="form-group">
                   <a href="#"><small>Forgot password?</small></a>
@@ -226,24 +228,31 @@
                   <input
                     type="text"
                     class="form-control mt-1"
-                    id="name"
+                    id="inputName"
                     placeholder="Enter your name"
                   />
+                  <p class="px-2" id="nameValidity"></p>
                 </div>
                 <div class="form-group mt-2">
                   <label for="Contact"><b>Contact</b></label>
-                  <input type="tel" class="form-control mt-1" id="Contact" />
+                  <input
+                    type="number"
+                    class="form-control mt-1"
+                    id="inputContact"
+                    placeholder="0123456789"
+                  />
+                  <p class="px-2" id="contactValidity"></p>
                 </div>
                 <div class="form-group mt-2">
                   <label for="date"><b>Date of birth</b></label>
-                  <input type="date" class="form-control mt-1" id="date" />
+                  <input type="date" class="form-control mt-1" id="birthDate" />
                 </div>
                 <div class="form-group mt-2">
                   <label for="Gender"><b>Gender</b></label>
                   <br />
                   <input type="radio" name="radio" id="radio1" /> Male
-                  <input type="radio" name="radio" id="radio2" /> Female
-                  <input type="radio" name="radio" id="radio3" /> Other
+                  <input type="radio" name="radio" id="radio2" checked="true" />
+                  Female <input type="radio" name="radio" id="radio3" /> Other
                 </div>
                 <div class="form-group mt-2">
                   <label for="Email1"><b>Email address</b></label>
@@ -253,17 +262,17 @@
                     id="registerEmail"
                     placeholder="abc@gmail.com"
                   />
-                  <p id="regiEmailtext"></p>
+                  <p class="px-2" id="registerEmailValidity"></p>
                 </div>
                 <div class="form-group mt-2">
                   <label for="Password"><b>Password</b></label>
                   <input
                     type="password"
                     class="form-control mt-1"
-                    id="password"
+                    id="inputPassword"
                     placeholder="Enter your Password"
                   />
-                  <p id="pwdtext"></p>
+                  <p class="px-2" id="passwordValidity"></p>
                 </div>
                 <div class="form-group">
                   <br />
@@ -286,8 +295,8 @@
                   </button>
                   <button
                     type="submit"
+                    id="registerButton"
                     class="btn btn-success"
-                    data-bs-dismiss="modal"
                   >
                     Register
                   </button>
@@ -655,7 +664,7 @@
 
     <!------- Packages Section ------->
 
-    <section class="min-vh-100 mb-5" id="packages">
+    <section class="min-vh-100 mb-4 pb-4" id="packages">
       <h1 class="text-center m-3">
         <span class="text-warning fw-bold">P</span>ackages
       </h1>
@@ -977,7 +986,7 @@
 
     <!------- Services Section ------->
 
-    <section class="min-vh-100" id="services">
+    <section class="mt-5" id="services">
       <h1 class="text-center m-3">
         <span class="text-warning fw-bold">S</span>ervices
       </h1>
@@ -1113,7 +1122,7 @@
 
     <!------- Gallery Section ------->
 
-    <section class="mb-5" id="gallery">
+    <section class="my-5" id="gallery">
       <h1 class="text-center m-3">
         <span class="text-warning fw-bold">G</span>allery
       </h1>
@@ -1158,11 +1167,11 @@
 
     <!------- About Section ------->
 
-    <section class="pb-4" id="about">
-      <h1 class="text-center m-3">
+    <section class="my-5 py-5 w-100" id="about">
+      <h1 class="text-center m-4">
         <span class="text-warning fw-bold">About</span> Us
       </h1>
-      <div class="container">
+      <div class="container m-4 mx-auto">
         <div class="row gy-3">
           <div class="col-lg-6">
             <img
@@ -1172,7 +1181,7 @@
             />
           </div>
 
-          <div class="col-md-6">
+          <div class="col">
             <h1>How our Travel Agency Work</h1>
             <p>
               Our travel agency serves as a comprehensive facilitator for
@@ -1198,21 +1207,21 @@
 
     <!------- Footer Section ------->
 
-    <footer class="h-100 mt-4 text-center" id="footer">
+    <footer class="h-100 mt-5 p-3 text-center" id="footer">
       <h1><span class="text-warning fw-bold">Infinity</span> Explorers</h1>
       <p>Unleashing Limitless Adventures, One Journey at a Time.</p>
       <ul class="fs-3">
         <li class="list-inline-item">
-          <a href="#"><i class="bi bi-facebook text-black"></i></a>
+          <i class="bi bi-facebook text-black"></i>
         </li>
         <li class="list-inline-item">
-          <a href="#"><i class="bi bi-twitter text-black"></i></a>
+          <i class="bi bi-twitter text-black"></i>
         </li>
         <li class="list-inline-item">
-          <a href="#"><i class="bi bi-instagram text-black"></i></a>
+          <i class="bi bi-instagram text-black"></i>
         </li>
         <li class="list-inline-item">
-          <a href="#"><i class="bi bi-linkedin text-black"></i></a>
+          <i class="bi bi-linkedin text-black"></i>
         </li>
       </ul>
       <p>Designed by <a href="">Explorers</a></p>

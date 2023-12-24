@@ -246,9 +246,6 @@ section {
 }
 
 /***** Gallery Section *****/
-#gallery {
-  min-height: 80vh;
-}
 
 #gallery img {
   transition: 0.5s;
@@ -261,11 +258,6 @@ section {
   }
 }
 
-
-/***** About Section *****/
-#about {
-  min-height: 80vh;
-}
 
 
 /***** Footer Section *****/
